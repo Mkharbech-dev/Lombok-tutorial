@@ -7,6 +7,8 @@ import java.net.URL;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Movie {
     private Long id;
     private String title;
