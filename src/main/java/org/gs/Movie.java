@@ -1,11 +1,12 @@
 package org.gs;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.net.URL;
 
 @Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Movie {
     private Long id;
     private String title;
@@ -14,4 +15,7 @@ public class Movie {
     private int rating;
     private URL officialSite;
     private String language;
+    // ajouter une annotaion pour le niveau d'acces à l'attribut
+    @Getter(AccessLevel.PRIVATE)
+    private final int minutes = 120;
 }
