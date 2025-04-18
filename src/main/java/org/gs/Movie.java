@@ -3,12 +3,20 @@ package org.gs;
 import lombok.*;
 
 import java.net.URL;
-
+/*
+// Générer un getter et un setter
 @Getter @Setter
+// Générer un constructeur sans arguments
 @NoArgsConstructor
+// Générer un constructeur avec tous les arguments
 @AllArgsConstructor
-@ToString
-@EqualsAndHashCode
+//Génerer la méthode tiString sans l'attribut "minutes".
+@ToString(exclude = "minutes")
+//Génerer la méthode Equals() et HashCode().
+@EqualsAndHashCode(exclude = "minutes")
+*/
+// Annotation qui remplace toutes les précedentes.
+@Data
 public class Movie {
     private Long id;
     private String title;
